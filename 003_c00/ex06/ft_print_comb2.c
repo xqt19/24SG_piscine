@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-void	ft_print_comb(void)
+void	ft_print_comb2(void)
 {
 	int		i;
 	int		j;
