@@ -6,14 +6,20 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 19:47:16 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/18 19:56:25 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/24 15:54:13 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
 
 void	ft_putstr(char *str)
 {
-	write(1, str, strlen(str));
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	write(1, str, i);
 }
