@@ -6,13 +6,11 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 16:51:10 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/23 17:04:16 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/24 15:32:57 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
-#include <stdio.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
@@ -32,13 +30,4 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	else if (s1[i] != '\0' && s2[i] == '\0')
 		return (s1[i]);
 	return (0);
-}
-
-int	main()
-{
-	char s1[20] = "helloworld";
-	char s2[20] = "hellowor";
-
-	printf("%d", ft_strncmp(s1,s2,8));
-	printf("%d", strncmp(s1,s2,8));
 }

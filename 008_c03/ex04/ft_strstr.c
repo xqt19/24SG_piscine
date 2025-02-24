@@ -6,13 +6,11 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 17:47:21 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/23 18:42:47 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/24 15:32:31 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
-#include <stdio.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -41,21 +39,4 @@ char	*ft_strstr(char *str, char *to_find)
 		i++;
 	}
 	return (NULL);
-}
-
-int	main()
-{
-	char s1[40] = "hellollpworld";
-	char s2[20] = "llp";
-
-    char *res0 = ft_strstr(s1,s2);
-    if (res0 == NULL)
-        printf("NULL!\n");
-    else
-	    printf("%s\n", res0);
-    char *res = strstr(s1,s2);
-    if (res == NULL)
-        printf("NULL!\n");
-    else
-	    printf("%s\n", res);
 }
