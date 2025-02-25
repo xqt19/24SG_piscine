@@ -6,7 +6,7 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:27:25 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/25 16:32:02 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/25 18:26:47 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ void	ft_putnbr_base(int nbr, char *base)
 {
 	int	size;
 
+	if (nbr < -2147483647 || nbr > 2147483647)
+		return ;
 	size = check_base(base);
 	if (size == 1)
 		return ;
