@@ -6,13 +6,11 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:06:32 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/25 13:42:27 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/25 15:28:18 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_atoi(char *str)
 {
@@ -37,6 +35,9 @@ int	ft_atoi(char *str)
 	}
 	return (negative * num);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
 
 // int main (int argc, char *argv[]){
 // 	if (argc != 2) 
