@@ -19,8 +19,7 @@ int	main(int argc, char *argv[])
 
 	if (argc < 2)
 	{
-		write(1, "Invalid Input!\n", 15);
-		return (1);
+		return (0);
 	}
 	i = argc - 1;
 	while (i > 0)

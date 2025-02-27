@@ -56,10 +56,7 @@ int	main(int argc, char *argv[])
 	int	j;
 
 	if (argc < 2)
-	{
-		write(1, "Invalid Input!\n", 15);
-		return (1);
-	}
+		return (0);
 	ft_sort_argv(argc, argv);
 	i = 1;
 	while (i < argc)
