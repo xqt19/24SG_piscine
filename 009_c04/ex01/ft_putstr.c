@@ -6,7 +6,7 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:01:27 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/24 16:02:00 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/27 17:10:30 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@ void	ft_putstr(char *str)
 
 	i = 0;
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 	write(1, str, i);
 }
+
+// int main()
+// {
+// 	char str[] = "helloworld";
+// 	ft_putstr(str);
+// }

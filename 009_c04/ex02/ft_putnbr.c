@@ -6,7 +6,7 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:02:47 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/24 16:03:55 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/27 17:09:04 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	ft_putnbr(int nb)
 {
 	char	num;
 
+	if (nb == -2147483648)
+	{
+		write(1, "-2", 2);
+		nb = 147483648;
+	}
 	if (nb < 0)
 	{
 		write(1, "-", 1);
@@ -28,3 +33,11 @@ void	ft_putnbr(int nb)
 	num = (char)(nb % 10 + '0');
 	write(1, &num, 1);
 }
+
+// int	main()
+// {
+// 	int num;
+
+// 	num = -123456;
+// 	ft_putnbr(num);
+// }

@@ -6,16 +6,17 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:27:25 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/25 18:26:47 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/27 17:01:35 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-int	check_base(char *base)
+unsigned int	check_base(char *base)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	while (base[i])
@@ -36,7 +37,7 @@ int	check_base(char *base)
 	return (i);
 }
 
-void	ft_print(int nbr, char *base, int size)
+void	ft_print(unsigned int nbr, char *base, unsigned int size)
 {
 	if (nbr >= size)
 		ft_print (nbr / size, base, size);
@@ -45,25 +46,29 @@ void	ft_print(int nbr, char *base, int size)
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int	size;
+	unsigned int	size;
+	unsigned int	num;
 
-	if (nbr < -2147483647 || nbr > 2147483647)
-		return ;
 	size = check_base(base);
 	if (size == 1)
 		return ;
 	if (nbr < 0)
 	{
 		write(1, "-", 1);
-		nbr *= -1;
+		if (nbr == -2147483648)
+			num = (unsigned int)(2147483648);
+		else
+			num = (unsigned int)(-nbr);
 	}
-	ft_print(nbr, base, size);
+	else
+		num = (unsigned int)(nbr);
+	ft_print(num, base, size);
 }
 
 // int	main()
 // {
-// // 	// int num = -103384;
-// // 	// char *base = "AbcdeFghij";
+// 	// int num = -2147483647;
+// 	// char *base = "0123456789";
 // 	int num = -7;
 // 	char *base = "01";
 // 	ft_putnbr_base(num, base);
