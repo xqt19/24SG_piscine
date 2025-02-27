@@ -29,3 +29,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char dest[40];
+// 	char *src = "helloworld";
+// 	ft_strncpy(dest,src, 5);
+// 	printf("%s\n", dest);
+// }

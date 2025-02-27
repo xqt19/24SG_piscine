@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-char	ft_strlowcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
@@ -25,3 +25,11 @@ char	ft_strlowcase(char *str)
 	}
 	return (str);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char src[] = "HELLOWORLD";
+// 	char *str = ft_strlowcase(src);
+// 	printf("%s\n", str);
+// }

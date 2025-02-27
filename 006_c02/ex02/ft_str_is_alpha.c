@@ -25,3 +25,11 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char *src = "";
+// 	int num = ft_str_is_alpha(src);
+// 	printf("%d\n", num);
+// }

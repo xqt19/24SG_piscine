@@ -25,3 +25,12 @@ char	ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (*dest);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char dest[40];
+// 	char *src = "helloworld";
+// 	ft_strcpy(dest,src);
+// 	printf("%s\n", dest);
+// }

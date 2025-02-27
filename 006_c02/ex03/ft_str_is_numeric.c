@@ -25,3 +25,11 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char *src = "123";
+// 	int num = ft_str_is_numeric(src);
+// 	printf("%d\n", num);
+// }

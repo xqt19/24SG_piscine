@@ -10,6 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	*ft_print_memory(void *addr, unsigned int size)
 {
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char str[] = "hello world, I am printing things.";
+// 	int size = 0;
+// 	while (str[size])
+// 		size ++;
+// 	ft_print_memory(str, size);
+// }

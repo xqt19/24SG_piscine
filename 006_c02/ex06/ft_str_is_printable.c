@@ -25,3 +25,11 @@ int	ft_str_is_printable(char *str)
 	}
 	return (1);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char *src = "hello\tworld";
+// 	int num = ft_str_is_printable(src);
+// 	printf("%d\n", num);
+// }

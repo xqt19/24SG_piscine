@@ -25,3 +25,11 @@ int	ft_str_is_uppercase(char *str)
 	}
 	return (1);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char *src = "HELLOWORLD";
+// 	int num = ft_str_is_uppercase(src);
+// 	printf("%d\n", num);
+// }

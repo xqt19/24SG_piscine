@@ -40,3 +40,10 @@ void	ft_putstr_non_printable(char *str)
 		i++;
 	}
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char src[] = "Coucou\ntu vas bien ?";
+// 	ft_putstr_non_printable(src);
+// }

@@ -25,3 +25,11 @@ int	ft_str_is_lowercase(char *str)
 	}
 	return (1);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char *src = "helloworld";
+// 	int num = ft_str_is_lowercase(src);
+// 	printf("%d\n", num);
+// }

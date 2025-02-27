@@ -30,3 +30,13 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	return (i);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char dest[40];
+// 	char src[] = "helloworld";
+// 	unsigned int num = ft_strlcpy(dest, src, 5);
+// 	printf("%s\n", dest);
+// 	printf("%d\n", num);
+// }
