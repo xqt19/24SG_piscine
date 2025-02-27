@@ -1,48 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 17:17:21 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/27 22:03:01 by xitan            ###   ########.fr       */
+/*   Created: 2025/02/27 22:03:52 by xitan             #+#    #+#             */
+/*   Updated: 2025/02/27 22:31:46 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
+int	*ft_range(int min, int max)
 {
-	int		i;
-	int		len;
-	char	*copy;
+	int	i;
+	int	*arr;
 
-	len = 0;
-	while (src[len])
-		len++;
-	copy = (char *) malloc((len + 1) * (sizeof(char)));
-	if (copy == NULL)
+	if (min >= max)
+		return (NULL);
+	arr = (int *) malloc((max - min) * (sizeof(int)));
+	if (arr == NULL)
 		return (NULL);
 	i = 0;
-	while (src[i])
+	while (min + i < max)
 	{
-		copy[i] = src[i];
+		arr[i] = min + i;
 		i++;
 	}
-	copy[i] = '\0';
-	return (copy);
+	return (arr);
 }
 
 // #include <stdio.h>
 // int	main()
 // {
-// 	char str[] = "helloworld";
-// 	char *str1 = ft_strdup(str);
-// 	if (str1 != NULL)
+// 	int num1 = 10;
+// 	int num2 = 21;
+// 	int *arr = ft_range(num1,num2);
+// 	if (arr == NULL)
+// 		printf("%s","It is null!");
+// 	else
 // 	{
-// 		printf("str0: %s\n", str);
-// 		printf("str1: %s\n", str1);
+// 		for(int i=0; i<(num2-num1);i++)
+// 			printf("%d-",arr[i]);
 // 	}
 // }
