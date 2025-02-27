@@ -6,7 +6,7 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 17:47:21 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/27 20:32:08 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/27 21:26:08 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,16 @@ char	*ft_strstr(char *str, char *to_find)
 // #include <string.h>
 // int main()
 // {
-// 	char str1[] = "helloworld";
-// 	char str2[] = "ll";
-// 	printf("%s\n", "strstr");
-// 	printf("%s\n", strstr(str1,str2));
-// 	printf("%s\n", "ft_strstr");
-// 	printf("%s\n", ft_strstr(str1,str2));
+// 	char str1[] = "hello";
+// 	char str2[] = "l";
+// 	printf("%s\n", "---strstr---");
+// 	if (strstr(str1,str2) != NULL)
+// 		printf("%s\n", strstr(str1,str2));
+// 	else
+// 		printf("%s\n", "It is Null!");
+// 	printf("%s\n", "---ft_strstr---");
+// 	if (ft_strstr(str1,str2) != NULL)
+// 		printf("%s\n", ft_strstr(str1,str2));
+// 	else
+// 		printf("%s\n", "It is Null!");
 // }
