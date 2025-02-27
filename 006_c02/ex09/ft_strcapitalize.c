@@ -12,6 +12,11 @@
 
 #include <unistd.h>
 
+int	ft_is_new_word(char *str, int i)
+{
+	return (i == -1 || (str[i] == ' ') || (str[i] == '+') || (str[i] == '-'));
+}
+
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
@@ -19,15 +24,9 @@ char	*ft_strcapitalize(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
+		if (ft_is_new_word(str, i - 1) && str[i] >= 'a' && str[i] <= 'z')
 			str[i] -= 32;
-		else if (str[i -1] == ' ' && str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 32;
-		else if (str[i -1] == '+' && str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 32;
-		else if (str[i -1] == '-' && str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 32;
-		else if (str[i] >= 'A' && str[i] <= 'Z')
+		else if (!ft_is_new_word(str, i - 1) && str[i] >= 'A' && str[i] <= 'Z')
 			str[i] += 32;
 		i++;
 	}
@@ -39,6 +38,8 @@ char	*ft_strcapitalize(char *str)
 // {
 // 	char src[] = 
 // 	"salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
-// 	char *str = ft_strcapitalize(src);
-// 	printf("%s\n", str);
+// 	char src2[] = 
+// 	"Salut, CoMMent tu vas ? 42mots Quarante-Deux; Cinquante+Et+Un";
+// 	printf("%s\n", ft_strcapitalize(src));
+// 	printf("%s\n", ft_strcapitalize(src2));
 // }

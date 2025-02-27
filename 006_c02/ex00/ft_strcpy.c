@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-char	ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
@@ -23,7 +23,7 @@ char	ft_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	return (*dest);
+	return (dest);
 }
 
 // #include <stdio.h>
@@ -31,6 +31,5 @@ char	ft_strcpy(char *dest, char *src)
 // {
 // 	char dest[40];
 // 	char *src = "helloworld";
-// 	ft_strcpy(dest,src);
-// 	printf("%s\n", dest);
+// 	printf("%s\n", ft_strcpy(dest,src));
 // }
