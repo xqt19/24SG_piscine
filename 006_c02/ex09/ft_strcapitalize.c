@@ -33,6 +33,7 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
+// post - review to do: change ft_is_new_word so that it checks the prev index is not a-zA-z0-9
 // #include <stdio.h>
 // int main()
 // {

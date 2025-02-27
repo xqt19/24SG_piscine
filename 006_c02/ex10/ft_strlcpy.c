@@ -29,6 +29,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	return (i);
 }
 
+//post-review TODO: strlcopy should return size of dest+src
 // #include <stdio.h>
 // int main()
 // {

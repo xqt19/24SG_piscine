@@ -6,7 +6,7 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 12:59:02 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/24 15:32:40 by xitan            ###   ########.fr       */
+/*   Updated: 2025/02/27 20:56:31 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,13 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char str1[100] = "hello";
+// 	char str2[] = "worlds";
+// 	unsigned int size = 20;
+// 	printf("%u\n", ft_strlcat(str1,str2,size));
+// 	printf("%s\n", str1);
+// }
