@@ -36,6 +36,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (dest_len + src_len);
 }
 
+// post -assesment TODO: there are cases a null terminator is not added
 // #include <stdio.h>
 // int main()
 // {
