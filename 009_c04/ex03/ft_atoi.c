@@ -6,7 +6,7 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:06:32 by xitan             #+#    #+#             */
-/*   Updated: 2025/02/25 15:28:18 by xitan            ###   ########.fr       */
+/*   Updated: 2025/03/01 16:59:38 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	ft_atoi(char *str)
 
 	num = 0;
 	negative = 1;
-	while (*str == ' ')
+	while (*str == ' ' || *str == '\f' || *str == '\n'
+		|| *str == '\r' || *str == '\t' || *str == '\v')
 		str++;
 	while (*str == '+' || *str == '-')
 	{
@@ -39,16 +40,7 @@ int	ft_atoi(char *str)
 // #include <stdio.h>
 // #include <stdlib.h>
 
-// int main (int argc, char *argv[]){
-// 	if (argc != 2) 
-// 	{
-//         printf("Invalid Input");
-//         return 0;
-//     }
-// // 	// char str[] = "     ---+--+1234ab567"; // -1234
-// // 	// char str1[] = "     ---+- -+1234ab567"; //0 because of invalid space
-// // 	// char str2[] = "     -a--+--+1234ab567"; // 0 becasue of invalid a
-// // 	// char str3[] = "+-123 4567"; // -123
-// // 	// char str4[] = ""; // 0
-// 	printf("%d\n", ft_atoi(argv[1]));
+// int main (){
+// 	char str4[] = "     --+--+1234ab567";
+// 	printf("%d\n", ft_atoi(str4));
 // }
