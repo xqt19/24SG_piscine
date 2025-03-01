@@ -1,0 +1,34 @@
+Notes on C Piscine Exam 02 taken on Friday Night 28 Feb 2025
+
+Q1 - aff_o
+int main(int argc, char *argv[]);
+create a program that checks the first argument and displays the 'o' character it finds within it followed by a newline. if the number of arguments is more than 1 return an 'o' followed by newline.
+if there is no 'o' in the string return an 'o' followed by a newline.
+(they want you to just print "o\n")
+
+Q2 - even
+create a program that prints the even numbers from 1 to 10. i.e. ("246810") followed by a newline
+
+Q3 - rotone
+create a function that takes a string and shifts by one each alphabetical char. (A becomes B, B becomes C, Z becomes A, a becomes b, z becomes a, and so on)
+
+Q4 - occ_a
+create a function that takes a string and returns the total number of times 'A' appears within it
+
+Q5 - ft_putnbr
+create a function that takes an int and prints it. it must be able to print all values possible of the int type.
+
+Q6 - aff_first_param
+create a program that prints the first argument followed by a newline
+
+Q7 - search_and_replace
+create a program that accepts 3 arguments. the first argument is a string. the second and third arguments must be strings of length 1. 
+if the first argument contains the second argument that character is replaced by the third argument. print the modified first argument.
+
+Q8 - count_words
+Create a function that given a string argument, counts and returns as an int the total number of words within it. 
+A word is defined as any string bookended by the start of string, a spacing or the end of string.
+
+Q9 - ft_range
+create a function that given 2 ints, creates an array of ints with all the ints between the 2 ints in ascending order, both ints inclusive.
+(i.e. given 3 and -2, returns [-2,-1,0,1,2,3] );
