@@ -6,21 +6,47 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:21:43 by xitan             #+#    #+#             */
-/*   Updated: 2025/03/02 17:38:23 by xitan            ###   ########.fr       */
+/*   Updated: 2025/03/03 20:23:41 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-//TODO base convert
+void	ft_itoa(char *res, int num, char *base_to, int base_to_size);
+int		is_valid(char c, char *base_from);
+
+int	base_convert(char *substr, char *base_from, int base_size)
+{
+	int	i;
+	int	j;
+	int	num;
+
+	i = 0;
+	num = 0;
+	while (substr[i] != '\0' && is_valid(substr[i], base_from))
+	{
+		j = 0;
+		while (base_from[j] != '\0')
+		{
+			if (substr[i] == base_from[j])
+			{
+				num *= base_size;
+				num += j;
+			}
+			j++;
+		}
+		i++;
+	}
+	return (num);
+}
 
 int	ft_atoi(char *str, char *base_from, int base_size)
 {
 	int		i;
 	int		negative;
 	char	*substr;
-	char	int_str[999];
 
 	i = 0;
 	while (((str[i] >= '\t') && (str[i] <= '\r')) || str[i] == ' ')
@@ -34,8 +60,8 @@ int	ft_atoi(char *str, char *base_from, int base_size)
 	}
 	substr = &str[i];
 	if (negative == -1)
-		return (-1 * base_convert(substr, int_str, base_from, base_size));
-	return (base_convert(substr, int_str, base_from, base_size));
+		return (-1 * base_convert(substr, base_from, base_size));
+	return (base_convert(substr, base_from, base_size));
 }
 
 int	check_base(char *base)
@@ -43,10 +69,7 @@ int	check_base(char *base)
 	int	i;
 	int	j;
 
-	i = 0;
-	while (base != "" && base[i] != '\0')
-		i++;
-	if (i < 2)
+	if ((base == 0) || (base[0] == '\0') || (base[1] == '\0'))
 		return (1);
 	i = 0;
 	while (base[i] != '\0')
@@ -64,6 +87,7 @@ int	check_base(char *base)
 		}
 		i++;
 	}
+	return (0);
 }
 
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
@@ -73,7 +97,7 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	int		num;
 	char	*res;
 
-	if (check_base(base_from_size) || check_base(base_to_size))
+	if (check_base(base_from) || check_base(base_to))
 		return (0);
 	base_from_size = 0;
 	while (base_from[base_from_size] != '\0')
@@ -88,40 +112,16 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	return (res);
 }
 
-int	main(void)
-{
-	char	*str;
-	char	*base_from;
-	char	*base_to;
-	char	*out_str;
+// int	main(void)
+// {
+// 	char	*str;
+// 	char	*base_from;
+// 	char	*base_to;
+// 	char	*out_str;
 
-	str = "-200";
-	base_from = "0123456789abcdef";
-	base_to = "0123456789";
-	out_str = ft_convert_base(str, base_from, base_to);
-	printf("Test 1: %s\n", out_str);
-}
-/*
-// 	str = "-115";
-// 	base_from = "0123456789abcdef";
-// 	base_to = "0123456789";
-// 	out_str = ft_convert_base(str, base_from, base_to);
-// 	printf("Test 1: %s\n", out_str);
-// 	str = "7fffffff";
-// 	base_from = "0123456789abcdef";
+// 	str = "-15";
+// 	base_from = "0123456789";
 // 	base_to = "01";
 // 	out_str = ft_convert_base(str, base_from, base_to);
-// 	printf("Test 2: %s\n", out_str);
-// 	str = "---5478773671";
-// 	base_from = "012345678";
-// 	base_to = "0123456789abcdef";
-// 	out_str = ft_convert_base(str, base_from, base_to);
-// 	printf("Test 3: %s\n", out_str);
-// 	str = "---1000+";
-// 	base_from = "01";
-// 	base_to = "0123456789";
-// 	out_str = ft_convert_base(str, base_from, base_to);
-// 	printf("Test 4: %s\n", out_str);
-// 	free(out_str);
-// 	return (0);
-	*/
+// 	printf("Test 1: %s\n", out_str);
+// }

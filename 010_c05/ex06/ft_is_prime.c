@@ -14,7 +14,7 @@
 
 int	ft_sqrt(int nb)
 {
-	int	num;
+	long	num;
 
 	if (nb < 0)
 		return (0);
@@ -25,7 +25,7 @@ int	ft_sqrt(int nb)
 			return (num);
 		num++;
 	}
-	return (0);
+	return (num);
 }
 
 int	ft_is_prime(int nb)
@@ -49,8 +49,6 @@ int	ft_is_prime(int nb)
 // #include <stdio.h>
 // int	main()
 // {
-// 	int nb = 30;
-//     for (int i=-5;i<=nb;i++){
-//         printf("%d - %d\n",i,ft_is_prime(i));
-//     }
+// 	int nb = 2147483645;
+// 	printf("%d\n",ft_is_prime(nb));
 // }

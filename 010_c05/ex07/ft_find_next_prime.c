@@ -14,7 +14,7 @@
 
 int	ft_sqrt(int nb)
 {
-	int	num;
+	long	num;
 
 	if (nb < 0)
 		return (0);
@@ -25,16 +25,14 @@ int	ft_sqrt(int nb)
 			return (num);
 		num++;
 	}
-	return (0);
+	return (num);
 }
 
 int	is_prime(int nb)
 {
 	int	i;
 
-	if (nb == 2)
-		return (1);
-	if (nb <= 1 || nb % 2 == 0)
+	if (nb % 2 == 0)
 		return (0);
 	i = 3;
 	while (i <= ft_sqrt(nb))
@@ -48,6 +46,8 @@ int	is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
+	if (nb < 2)
+		return (2);
 	if (is_prime(nb))
 		return (nb);
 	return (ft_find_next_prime(nb + 1));
@@ -56,7 +56,7 @@ int	ft_find_next_prime(int nb)
 // #include <stdio.h>
 // int	main()
 // {
-// 	int nb = 30;
-// 	for (int i = -5; i <= nb; i++)
+// 	for (int i=-5; i<21;i++){
 // 		printf("%d - %d\n",i,ft_find_next_prime(i));
+// 	}
 // }
