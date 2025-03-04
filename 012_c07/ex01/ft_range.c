@@ -6,7 +6,7 @@
 /*   By: xitan <xitan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 22:03:52 by xitan             #+#    #+#             */
-/*   Updated: 2025/03/02 16:15:40 by xitan            ###   ########.fr       */
+/*   Updated: 2025/03/04 22:53:08 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	*ft_range(int min, int max)
 	int	*arr;
 
 	if (min >= max)
-		size = 0;
+		return (NULL);
 	else
 		size = max - min;
 	arr = (int *) malloc(size * (sizeof(int)));
