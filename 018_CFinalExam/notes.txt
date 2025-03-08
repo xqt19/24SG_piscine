@@ -34,7 +34,7 @@ given a string count all words and return it as an int. A word is any string boo
 Q11 - ft_range (3:21)
 given 2 ints return an arr with ints counting from start to end (inclusive)
 
-Q12 - ft_split (2:31 - 2:28 - 2:01 - 1:50)
+Q12 - ft_split (2:31 - 2:28 - 2:01 - 1:50 - 1:32)
 given a string of seperator chars and a string, split the string whereever there is a seperator and return an array of all words
 
 Q13 ft_list_remove_if
