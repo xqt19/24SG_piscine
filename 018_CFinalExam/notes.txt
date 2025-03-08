@@ -1,0 +1,41 @@
+Notes on C Final Exam taken on Friday 7 Mar 2025 (8hrs)
+Each qn is worth 6 points.
+
+Q1 - countdown (Completed with 7:54 remaining)
+print 109876543210
+
+Q2 - even (7:51)
+print 0246810
+
+Q3 - ft_strcmp (7:45)
+given 2 strings compare them lexically and return an integer positive, negative or 0
+
+Q4 - count_alen (7:36)
+given a string return the length of the string before the first 'a'
+
+Q5 - ft_atoi (1st failure - 7:20 2nd - 7:03 success - 6:54)
+given a string return its integer value (e.g. "   -123" = -123). Is different from the c04 version because there is only one - or + sign allowed.
+
+Q6 - alpha_mirror (6:22 - 6:19)
+given a string, return the string after mirroring all alphabet char without changing its uppercase/lowercase. (e.g. A->Z and b->y)
+
+Q7 - ft_putnbr (6:00)
+given an int print it
+
+Q8 - aff_first_param (5:53 - 5:50)
+print the first param given from the cmd line
+
+Q9 - union (3:59)
+print all unique chars in 2 given strings in order they appear
+
+Q10 - count_words (3:40)
+given a string count all words and return it as an int. A word is any string bookended by the start of string, end of string or spaces
+
+Q11 - ft_range (3:21)
+given 2 ints return an arr with ints counting from start to end (inclusive)
+
+Q12 - ft_split (2:31 - 2:28 - 2:01 - 1:50)
+given a string of seperator chars and a string, split the string whereever there is a seperator and return an array of all words
+
+Q13 ft_list_remove_if
+given an array of structs, a data and a function as arguments compare the data in the structs with the given data and remove the indices that match

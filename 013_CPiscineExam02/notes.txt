@@ -1,4 +1,4 @@
-Notes on C Piscine Exam 02 taken on Friday Night 28 Feb 2025
+Notes on C Piscine Exam 02 taken on Friday Night 28 Feb 2025 (4hrs)
 
 Q1 - aff_o
 int main(int argc, char *argv[]);
